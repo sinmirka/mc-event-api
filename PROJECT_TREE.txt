@@ -1,0 +1,18 @@
+├── app/
+│   ├── core/
+│   │   ├── config.py
+│   │   └── security.py
+│   ├── events.db
+│   ├── main.py
+│   ├── routers/
+│   │   └── events.py
+│   ├── schemas/
+│   │   └── event.py
+│   ├── services/
+│   │   ├── discord.py
+│   │   └── storage.py
+│   └── __init__.py
+├── PROJECT_TREE
+├── README.md
+├── requirements.txt
+└── test.py
