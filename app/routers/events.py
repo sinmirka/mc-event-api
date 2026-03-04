@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Request
 from datetime import datetime
 
 from slowapi import Limiter
@@ -22,8 +22,8 @@ def normalize_time(timestamp):
     return time
 
 @router.post("/event")
-@limiter.limit(limit_value="10/minute")
-async def receive_event(payload: EventRequest):
+@limiter.limit("10/minute")
+async def receive_event(request: Request, payload: EventRequest):
 
     verify_timestamp(payload.timestamp)
 
